@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 711, y: 492}
   m_MaxSize: {x: 18006, y: 14042}
   vertical: 0
-  controlID: 2743
+  controlID: 7779
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 2657
+  controlID: 7983
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -342,14 +342,14 @@ MonoBehaviour:
     height: 710
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 0
-  lastFramingTime: 7109.018925508569
+  lastFramingTime: 11136.092095813985
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -28.816896, y: -2.1111553, z: 0.8280028}
+    m_Target: {x: -25.76406, y: 3.2161102, z: -19.042908}
     speed: 2
-    m_Value: {x: -28.816896, y: -2.1111553, z: 0.8280028}
+    m_Value: {x: -25.76406, y: 3.2161102, z: -19.042908}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -377,13 +377,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.04098059, y: -0.9398483, z: 0.31658763, w: 0.12163545}
+    m_Target: {x: -0.020160303, y: -0.9764943, z: 0.10529602, w: -0.1870873}
     speed: 2
-    m_Value: {x: -0.04098024, y: 0.93984026, z: -0.31658491, w: -0.121634394}
+    m_Value: {x: 0.020160303, y: 0.97649425, z: -0.10529602, w: 0.1870873}
   m_Size:
-    m_Target: 28.705051
+    m_Target: 9.153905
     speed: 2
-    m_Value: 28.705051
+    m_Value: 9.153905
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -423,7 +423,41 @@ MonoBehaviour:
   m_ViewTransforms:
     m_KeySerializationHelper:
     - {fileID: 1107981035649882092, guid: d8e55a456da729f4392960e699228529, type: 2}
+    - {fileID: 1107804171220840422, guid: 5c56f1674ac07e8419aaaa698cefe7fc, type: 2}
+    - {fileID: 1107048823945368068, guid: d8e55a456da729f4392960e699228529, type: 2}
     m_ValueSerializationHelper:
+    - e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
     - e00: 1
       e01: 0
       e02: 0
@@ -451,7 +485,7 @@ MonoBehaviour:
   m_MiniTool: 0
   m_LockTracker:
     m_IsLocked: 0
-  m_CurrentEditor: 1
+  m_CurrentEditor: 0
   m_LayerEditor:
     m_SelectedLayerIndex: 0
 --- !u!114 &14
@@ -480,10 +514,10 @@ MonoBehaviour:
     height: 301
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: bcfbffff
-    m_LastClickedID: -1092
-    m_ExpandedIDs: e6fbffff00000000
+    scrollPos: {x: 0, y: 468}
+    m_SelectedIDs: 0821feff
+    m_LastClickedID: 0
+    m_ExpandedIDs: 02f8ffff08f8ffff0ef8ffff16f8ffff1af8ffff32f8ffff42f8ffffcef8ffffe6fbffff00000000e2170000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -544,20 +578,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Personagens
+    - Assets/Prefabs/Armas
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs/Personagens
+  - Assets/Prefabs/Armas
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Fontes\apocalipse-zumbi
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 29}
-    m_SelectedIDs: 4a0c0000
-    m_LastClickedID: 3146
-    m_ExpandedIDs: 000000004c090000be090000760e00000212000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: ec0f0000
+    m_LastClickedID: 4076
+    m_ExpandedIDs: 000000004c090000be0900000412000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -585,7 +619,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004c090000be090000760e00000212000000ca9a3b
+    m_ExpandedIDs: 000000004c090000be0900000412000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
