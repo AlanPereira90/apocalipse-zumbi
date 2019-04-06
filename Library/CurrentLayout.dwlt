@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 521}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 781
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -107,10 +107,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 711, y: 492}
-  m_MaxSize: {x: 18006, y: 14042}
+  m_MinSize: {x: 711, y: 471}
+  m_MaxSize: {x: 18006, y: 14021}
   vertical: 0
-  controlID: 7779
+  controlID: 3021
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -129,8 +129,8 @@ MonoBehaviour:
     y: 0
     width: 855
     height: 731
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -158,10 +158,10 @@ MonoBehaviour:
     y: 0
     width: 404
     height: 731
-  m_MinSize: {x: 234, y: 492}
-  m_MaxSize: {x: 10004, y: 14042}
+  m_MinSize: {x: 234, y: 471}
+  m_MaxSize: {x: 10004, y: 14021}
   vertical: 1
-  controlID: 7983
+  controlID: 2998
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -180,8 +180,8 @@ MonoBehaviour:
     y: 0
     width: 404
     height: 322
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -272,8 +272,8 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -614.4
-    m_HBaseRangeMax: 614.4
+    m_HBaseRangeMin: -341.2
+    m_HBaseRangeMax: 341.2
     m_VBaseRangeMin: -277.2
     m_VBaseRangeMax: 277.2
     m_HAllowExceedBaseRangeMin: 1
@@ -293,25 +293,25 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 1536
+      width: 853
       height: 693
     m_Scale: {x: 1.25, y: 1.25}
-    m_Translation: {x: 768, y: 346.5}
+    m_Translation: {x: 426.5, y: 346.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -614.4
+      x: -341.2
       y: -277.2
-      width: 1228.8
+      width: 682.4
       height: 554.4
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 1920, y: 887.5}
+  m_LastWindowPixelSize: {x: 1066.25, y: 887.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -342,14 +342,14 @@ MonoBehaviour:
     height: 710
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 0
-  lastFramingTime: 11136.092095813985
+  lastFramingTime: 1222.0471472170773
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -25.76406, y: 3.2161102, z: -19.042908}
+    m_Target: {x: -32.3597, y: 0.14522594, z: -32.610577}
     speed: 2
-    m_Value: {x: -25.76406, y: 3.2161102, z: -19.042908}
+    m_Value: {x: -32.3597, y: 0.14522594, z: -32.610577}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -377,13 +377,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.020160303, y: -0.9764943, z: 0.10529602, w: -0.1870873}
+    m_Target: {x: 0.008735161, y: -0.9708466, z: 0.23697875, w: 0.03586223}
     speed: 2
-    m_Value: {x: 0.020160303, y: 0.97649425, z: -0.10529602, w: 0.1870873}
+    m_Value: {x: -0.008735161, y: 0.97084665, z: -0.23697877, w: -0.03586223}
   m_Size:
-    m_Target: 9.153905
+    m_Target: 28.649723
     speed: 2
-    m_Value: 9.153905
+    m_Value: 28.649723
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -485,7 +485,7 @@ MonoBehaviour:
   m_MiniTool: 0
   m_LockTracker:
     m_IsLocked: 0
-  m_CurrentEditor: 0
+  m_CurrentEditor: 1
   m_LayerEditor:
     m_SelectedLayerIndex: 0
 --- !u!114 &14
@@ -514,10 +514,10 @@ MonoBehaviour:
     height: 301
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 468}
-    m_SelectedIDs: 0821feff
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 02f8ffff08f8ffff0ef8ffff16f8ffff1af8ffff32f8ffff42f8ffffcef8ffffe6fbffff00000000e2170000
+    m_ExpandedIDs: ded6fdffaad7fdfffcd8fdffe6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -578,20 +578,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Armas
+    - Assets/Prefabs/Ambiente
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs/Armas
+  - Assets/Prefabs/Ambiente
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Fontes\apocalipse-zumbi
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ec0f0000
-    m_LastClickedID: 4076
-    m_ExpandedIDs: 000000004c090000be0900000412000000ca9a3b
+    m_SelectedIDs: cc130000
+    m_LastClickedID: 5068
+    m_ExpandedIDs: 00000000540900001412000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -619,7 +619,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004c090000be0900000412000000ca9a3b
+    m_ExpandedIDs: 00000000540900001412000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -647,7 +647,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c62300000e2e00007c170000
+    m_ExpandedInstanceIDs: c62300000e2e00007c1700005c090000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -671,7 +671,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 257}
     m_GridSize: 16
   m_DirectoriesAreaWidth: 115
 --- !u!114 &16

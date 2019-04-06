@@ -6,11 +6,27 @@ public class Bala : MonoBehaviour {
 
 	public float Velocidade = 30;
 
+	private Rigidbody rigidBodyBala;
+
+	private void Start() {
+
+		rigidBodyBala = GetComponent<Rigidbody>();
+		
+	}
+
 	// Update is called once per frame
 	void FixedUpdate () {
 		
-		GetComponent<Rigidbody>().MovePosition
-		  (GetComponent<Rigidbody>().position + (transform.forward * Velocidade * Time.deltaTime));
+		rigidBodyBala.MovePosition
+		  (rigidBodyBala.position + (transform.forward * Velocidade * Time.deltaTime));
 
+	}
+
+	private void OnTriggerEnter(Collider objetoDeColisao) {
+		
+		if (objetoDeColisao.tag == "Inimigo"){
+			Destroy(objetoDeColisao.gameObject);
+		}
+		Destroy(gameObject);
 	}
 }
