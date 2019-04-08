@@ -9,17 +9,18 @@ public class ControlaInimigo : MonoBehaviour {
 
 	private Rigidbody rigidgbodyInimigo;
 	private Animator animatorInimigo;
+	private ControlaJogador controlaJogador;
 
 	// Use this for initialization
 	void Start () {
 		Jogador = GameObject.FindWithTag("Jogador");
+		controlaJogador = Jogador.GetComponent<ControlaJogador>();
 
 		rigidgbodyInimigo = GetComponent<Rigidbody>();
-		animatorInimigo = GetComponent<Animator>();
+		animatorInimigo = GetComponent<Animator>();		
 
 		int tipoZumbi = Random.Range(1,28);
-		transform.GetChild(tipoZumbi).gameObject.SetActive(true);
-		
+		transform.GetChild(tipoZumbi).gameObject.SetActive(true);		
 	}
 	
 	// Update is called once per frame
@@ -48,8 +49,8 @@ public class ControlaInimigo : MonoBehaviour {
 	}
 
 	void AtacaJogador(){
-		Time.timeScale = 0;
-		Jogador.GetComponent<ControlaJogador>().TextoGameOver.SetActive(true);
-		Jogador.GetComponent<ControlaJogador>().Vivo = false;
+
+		int dano = Random.Range(10, 21);
+		controlaJogador.GeraDano(dano);
 	}
 }

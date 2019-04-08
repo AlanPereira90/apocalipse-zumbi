@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 public class ControlaJogador : MonoBehaviour {
 
 	public float Velocidade = 10;
-	public bool Vivo = true;
+	public int Vida = 100;
 	public LayerMask MascaraChao;
 	public GameObject TextoGameOver;
+	public ControlaInterface controlaInterface;
 
 	private Vector3 direcao;
 
@@ -37,8 +38,8 @@ public class ControlaJogador : MonoBehaviour {
 			animatorJogador.SetBool("movendo",false);
 		}
 
-		if(Vivo == false){
-			if(Input.GetButtonDown("Fire1")){
+		if(Vida <= 0){
+			if(Input.GetButtonDown("Fire1")){				
 				SceneManager.LoadScene("game");
 			}
 		}
@@ -63,5 +64,15 @@ public class ControlaJogador : MonoBehaviour {
 			rigidbodyJogador.MoveRotation(novaRotacao);
 		}	
 		
+	}
+
+	public void GeraDano(int dano){
+
+		Vida -= dano;
+		controlaInterface.AtualizaVidaJogador();
+		if (Vida <= 0){
+			Time.timeScale = 0;
+			TextoGameOver.SetActive(true);
+		}
 	}
 }
