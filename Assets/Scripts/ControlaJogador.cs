@@ -10,6 +10,7 @@ public class ControlaJogador : MonoBehaviour {
 	public LayerMask MascaraChao;
 	public GameObject TextoGameOver;
 	public ControlaInterface controlaInterface;
+	public AudioClip SomDeDano;
 
 	private Vector3 direcao;
 
@@ -70,6 +71,7 @@ public class ControlaJogador : MonoBehaviour {
 
 		Vida -= dano;
 		controlaInterface.AtualizaVidaJogador();
+		ControlaAudio.instancia.PlayOneShot(SomDeDano);
 		if (Vida <= 0){
 			Time.timeScale = 0;
 			TextoGameOver.SetActive(true);
