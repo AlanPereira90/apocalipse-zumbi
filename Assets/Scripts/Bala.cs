@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Bala : MonoBehaviour {
 
-	public float Velocidade = 30;
-	public AudioClip SomDeMorte;
+	public float Velocidade = 30;	
+	private int danoDoTiro = 1;
 
 	private Rigidbody rigidBodyBala;
 
@@ -26,9 +26,7 @@ public class Bala : MonoBehaviour {
 	private void OnTriggerEnter(Collider objetoDeColisao) {
 		
 		if (objetoDeColisao.tag == "Inimigo"){
-			Destroy(objetoDeColisao.gameObject);
-			ControlaAudio.instancia.PlayOneShot(SomDeMorte);
+			objetoDeColisao.GetComponent<ControlaInimigo>().TomarDano(danoDoTiro);
 		}
-		Destroy(gameObject);
 	}
 }
