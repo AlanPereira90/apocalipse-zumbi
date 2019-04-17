@@ -28,5 +28,6 @@ public class Bala : MonoBehaviour {
 		if (objetoDeColisao.tag == "Inimigo"){
 			objetoDeColisao.GetComponent<ControlaInimigo>().TomarDano(danoDoTiro);
 		}
+		Destroy(gameObject);
 	}
 }

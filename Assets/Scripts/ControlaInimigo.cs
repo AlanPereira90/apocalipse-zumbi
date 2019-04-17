@@ -7,6 +7,10 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
 	public GameObject Jogador;
 	public AudioClip SomDeMorte;
 	
+	private Vector3 direcao;
+	private Vector3 posicaoAleatoriaVagar;
+	private float contadorVagar;
+	private float tempoEntrePosicoesVagar = 4;
 	private ControlaJogador controlaJogador;
 	private MovimentoPersonagem movimentoInimigo;
 	private AnimacaoPersonagem animacaoInimigo;
@@ -22,22 +26,46 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
 		AleatorizarZumbi();				
 	}
 
-	void FixedUpdate() {
-
-		Vector3 direcao = Jogador.transform.position - transform.position; 
+	void FixedUpdate() {		
 
 		float distancia = Vector3.Distance(transform.position, Jogador.transform.position);
 
-		movimentoInimigo.Rotacionar(direcao);
+		movimentoInimigo.Rotacionar(direcao);		
 
-		if (distancia > 2.5){
+		if (distancia > statusInimigo.AlcanceVisao){
+			Vagar();
+		}
+		else if (distancia > statusInimigo.AlcanceAtaque){
+			direcao = Jogador.transform.position - transform.position;
 			animacaoInimigo.Atacar(false);
-
 		  	movimentoInimigo.Movimentar(direcao, statusInimigo.Velocidade);			
 		}
 		else{
 			animacaoInimigo.Atacar(true);
 		}
+		animacaoInimigo.AnimarMovimento(direcao);
+	}
+
+	void Vagar(){
+		contadorVagar -= Time.deltaTime;
+
+		if (contadorVagar <= 0){
+			posicaoAleatoriaVagar = PosicaoAleatoria();			
+			contadorVagar = tempoEntrePosicoesVagar;
+		}
+
+		if(Vector3.Distance(transform.position, posicaoAleatoriaVagar) > 0.05){
+			direcao = posicaoAleatoriaVagar - transform.position;
+			movimentoInimigo.Movimentar(direcao, statusInimigo.Velocidade);
+		}
+	}
+
+	Vector3 PosicaoAleatoria(){
+		Vector3 posicao = Random.insideUnitSphere * 10;
+		posicao += transform.position;
+		posicao.y = transform.position.y;
+
+		return posicao;
 	}
 
 	void AtacaJogador(){
