@@ -1,12 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class ControlaJogador : MonoBehaviour, IMatavel {
 	
 	public LayerMask MascaraChao;
-	public GameObject TextoGameOver;
 	public ControlaInterface controlaInterface;
 	public AudioClip SomDeDano;
 
@@ -15,8 +13,7 @@ public class ControlaJogador : MonoBehaviour, IMatavel {
 	private AnimacaoPersonagem animacaoJogador;
 	public Status statusJogador;
 
-	private void Start() {
-		Time.timeScale = 1;
+	private void Start() {		
 		movimentoJogador = GetComponent<MovimentoJogador>();
 		animacaoJogador = GetComponent<AnimacaoPersonagem>();
 		statusJogador = GetComponent<Status>();
@@ -30,14 +27,7 @@ public class ControlaJogador : MonoBehaviour, IMatavel {
 
 		direcao = new Vector3(eixoX,0,eixoZ);		
 
-		animacaoJogador.AnimarMovimento(direcao);
-
-		if(statusJogador.Vida <= 0){
-			if(Input.GetButtonDown("Fire1")){				
-				SceneManager.LoadScene("game");
-			}
-		}
-		
+		animacaoJogador.AnimarMovimento(direcao);		
 	}
 
 	void FixedUpdate() {
@@ -57,7 +47,6 @@ public class ControlaJogador : MonoBehaviour, IMatavel {
 	}
 
 	public void Morrer(){
-		Time.timeScale = 0;
-		TextoGameOver.SetActive(true);
+		controlaInterface.GameOver();
 	}
 }
