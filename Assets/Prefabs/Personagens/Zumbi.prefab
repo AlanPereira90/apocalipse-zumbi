@@ -1434,6 +1434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Jogador: {fileID: 0}
+  KitMedico: {fileID: 1060151288946202, guid: 6150c6f66b7034ec5b3672478195682a, type: 2}
   SomDeMorte: {fileID: 8300000, guid: 494865de11de0904699682fa13fb0fb8, type: 3}
 --- !u!114 &114850456399915070
 MonoBehaviour:

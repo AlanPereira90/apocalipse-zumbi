@@ -10,7 +10,7 @@ public class GeradorZumbis : MonoBehaviour {
 
 	private float contadorTempo = 0;
 	private float distanciaMinimaParaGerar = 30;
-	private float raioDeGeracao = 3;
+	private float raioDeGeracao = 4;
 	private GameObject jogador;
 
 	// Use this for initialization

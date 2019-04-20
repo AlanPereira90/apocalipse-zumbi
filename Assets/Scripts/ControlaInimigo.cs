@@ -5,7 +5,9 @@ using UnityEngine;
 public class ControlaInimigo : MonoBehaviour, IMatavel {
 
 	public GameObject Jogador;
+	public GameObject KitMedico;
 	public AudioClip SomDeMorte;
+	
 	
 	private Vector3 direcao;
 	private Vector3 posicaoAleatoriaVagar;
@@ -15,6 +17,7 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
 	private MovimentoPersonagem movimentoInimigo;
 	private AnimacaoPersonagem animacaoInimigo;
 	private Status statusInimigo;
+	private float procentagemGerarKitMedico = 0.1f;
 
 	// Use this for initialization
 	void Start () {
@@ -28,26 +31,27 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
 
 	void FixedUpdate() {		
 
-		float distancia = Vector3.Distance(transform.position, Jogador.transform.position);
+		float distancia = Vector3.Distance(transform.position, Jogador.transform.position);	
+		
+		if (direcao.magnitude != 0){
+			movimentoInimigo.Rotacionar(direcao);
+		}
 
-		movimentoInimigo.Rotacionar(direcao);		
+		animacaoInimigo.AnimarMovimento(direcao);			
 
 		if (distancia > statusInimigo.AlcanceVisao){
 			Vagar();
 		}
-		else{
-			direcao = Jogador.transform.position - transform.position;
-			
-			if (distancia > statusInimigo.AlcanceAtaque){			
-				animacaoInimigo.Atacar(false);
-				movimentoInimigo.Movimentar(direcao, statusInimigo.Velocidade);			
-			}
-			else{
-				animacaoInimigo.Atacar(true);
-			}
+		else if (distancia > statusInimigo.AlcanceAtaque){	
+			direcao = Jogador.transform.position - transform.position;			
+			movimentoInimigo.Movimentar(direcao, statusInimigo.Velocidade);		
+			animacaoInimigo.Atacar(false);	
 		}
+		else{	
+			direcao = Jogador.transform.position - transform.position;		
+			animacaoInimigo.Atacar(true);
+		}		
 		
-		animacaoInimigo.AnimarMovimento(direcao);
 	}
 
 	void Vagar(){
@@ -92,5 +96,12 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
 	public void Morrer(){		
 		Destroy(gameObject);
 		ControlaAudio.instancia.PlayOneShot(SomDeMorte);
+		VerificarGeracaoDeKitMedico();
+	}
+
+	void VerificarGeracaoDeKitMedico(){
+		if (Random.value <= procentagemGerarKitMedico){
+			Instantiate(KitMedico, transform.position, Quaternion.identity);
+		}
 	}
 }
