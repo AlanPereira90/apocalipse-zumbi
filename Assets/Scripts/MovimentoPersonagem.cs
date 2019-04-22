@@ -16,7 +16,9 @@ public class MovimentoPersonagem : MonoBehaviour {
 	}
 
 	public void Rotacionar(Vector3 direcao){
-		Quaternion novaRotacao = Quaternion.LookRotation(direcao);
-		rigidbodyPersonagem.MoveRotation(novaRotacao);
+		if (direcao != Vector3.zero){
+			Quaternion novaRotacao = Quaternion.LookRotation(direcao);
+			rigidbodyPersonagem.MoveRotation(novaRotacao);
+		}
 	}
 }

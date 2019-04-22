@@ -10,8 +10,10 @@ public class ControlaInterface : MonoBehaviour {
 	public GameObject PainelGameOver;
 	public Text TextoTempoDeSobrevivencia;
 	public Text TextoRecorde;
+	public Text TextoZumbisMortos;
 	private ControlaJogador controlaJogador;
 	private float tempoSalvo;
+	private int quantidadeZumbisMortos;
 
 	// Use this for initialization
 	void Start () {
@@ -55,5 +57,10 @@ public class ControlaInterface : MonoBehaviour {
 	public void Reiniciar(){
 		Time.timeScale = 1;	
 		SceneManager.LoadScene("game");
+	}
+
+	public void IncrementaZumbisMortos(){
+		quantidadeZumbisMortos++;
+		TextoZumbisMortos.text = "X " + quantidadeZumbisMortos;
 	}
 }

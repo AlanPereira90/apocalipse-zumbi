@@ -18,6 +18,7 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
 	private AnimacaoPersonagem animacaoInimigo;
 	private Status statusInimigo;
 	private float procentagemGerarKitMedico = 0.1f;
+	private ControlaInterface controlaInterface; 
 
 	// Use this for initialization
 	void Start () {
@@ -26,33 +27,29 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
 		movimentoInimigo = GetComponent<MovimentoPersonagem>();	
 		animacaoInimigo = GetComponent<AnimacaoPersonagem>();
 		statusInimigo = GetComponent<Status>();
-		AleatorizarZumbi();				
+		AleatorizarZumbi();	
+		controlaInterface = GameObject.FindObjectOfType(typeof(ControlaInterface)) as ControlaInterface;			
 	}
 
-	void FixedUpdate() {		
+	void FixedUpdate(){
+        float distancia = Vector3.Distance(transform.position, Jogador.transform.position);
 
-		float distancia = Vector3.Distance(transform.position, Jogador.transform.position);	
-		
-		if (direcao.magnitude != 0){
-			movimentoInimigo.Rotacionar(direcao);
-		}
+        movimentoInimigo.Rotacionar(direcao);
+        animacaoInimigo.AnimarMovimento(direcao);
 
-		animacaoInimigo.AnimarMovimento(direcao);			
-
-		if (distancia > statusInimigo.AlcanceVisao){
-			Vagar();
-		}
-		else if (distancia > statusInimigo.AlcanceAtaque){	
-			direcao = Jogador.transform.position - transform.position;			
-			movimentoInimigo.Movimentar(direcao, statusInimigo.Velocidade);		
-			animacaoInimigo.Atacar(false);	
-		}
-		else{	
-			direcao = Jogador.transform.position - transform.position;		
-			animacaoInimigo.Atacar(true);
-		}		
-		
-	}
+        if(distancia > statusInimigo.AlcanceVisao){
+            Vagar ();
+        }
+        else if (distancia > statusInimigo.AlcanceAtaque){
+            direcao = Jogador.transform.position - transform.position;
+            movimentoInimigo.Movimentar(direcao, statusInimigo.Velocidade);
+            animacaoInimigo.Atacar(false);
+        }
+        else{
+            direcao = Jogador.transform.position - transform.position;
+            animacaoInimigo.Atacar(true);
+        }
+    }
 
 	void Vagar(){
 		contadorVagar -= Time.deltaTime;
@@ -97,6 +94,7 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
 		Destroy(gameObject);
 		ControlaAudio.instancia.PlayOneShot(SomDeMorte);
 		VerificarGeracaoDeKitMedico();
+		controlaInterface.IncrementaZumbisMortos();
 	}
 
 	void VerificarGeracaoDeKitMedico(){

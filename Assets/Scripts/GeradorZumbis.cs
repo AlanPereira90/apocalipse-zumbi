@@ -33,11 +33,11 @@ public class GeradorZumbis : MonoBehaviour {
 
 	IEnumerator NovoZumbi(){
 		Vector3 posicaoDeCriacao = PosicaoAleatoria();
-		Collider[] colisores = Physics.OverlapSphere(posicaoDeCriacao, 1, LayerZumbi);
+		Collider[] colisores = Physics.OverlapSphere(posicaoDeCriacao, 2, LayerZumbi);
 
 		while (colisores.Length > 0){
 			posicaoDeCriacao = PosicaoAleatoria();
-			colisores = Physics.OverlapSphere(posicaoDeCriacao, 1, LayerZumbi);	
+			colisores = Physics.OverlapSphere(posicaoDeCriacao, 2, LayerZumbi);	
 			yield return null;
 		}
 		Instantiate(Zumbi, transform.position, transform.rotation);
