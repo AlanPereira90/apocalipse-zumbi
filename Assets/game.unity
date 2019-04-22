@@ -622,6 +622,7 @@ MonoBehaviour:
   TextoTempoDeSobrevivencia: {fileID: 571450112}
   TextoRecorde: {fileID: 1578248853}
   TextoZumbisMortos: {fileID: 714792743}
+  quantidadeZumbisMortos: 0
 --- !u!1001 &109740084
 Prefab:
   m_ObjectHideFlags: 0
@@ -1156,12 +1157,17 @@ Prefab:
     - target: {fileID: 114340949158251090, guid: e44f753be029a3e4e8ca8f3a14028b80,
         type: 2}
       propertyPath: TempoGerarZumbi
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1117703817387718, guid: e44f753be029a3e4e8ca8f3a14028b80, type: 2}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114340949158251090, guid: e44f753be029a3e4e8ca8f3a14028b80,
+        type: 2}
+      propertyPath: controlaInterface
+      value: 
+      objectReference: {fileID: 101971466}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e44f753be029a3e4e8ca8f3a14028b80, type: 2}
   m_IsPrefabAsset: 0
@@ -1211,12 +1217,17 @@ Prefab:
     - target: {fileID: 114340949158251090, guid: e44f753be029a3e4e8ca8f3a14028b80,
         type: 2}
       propertyPath: TempoGerarZumbi
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1117703817387718, guid: e44f753be029a3e4e8ca8f3a14028b80, type: 2}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114340949158251090, guid: e44f753be029a3e4e8ca8f3a14028b80,
+        type: 2}
+      propertyPath: controlaInterface
+      value: 
+      objectReference: {fileID: 101971466}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e44f753be029a3e4e8ca8f3a14028b80, type: 2}
   m_IsPrefabAsset: 0
@@ -2278,12 +2289,17 @@ Prefab:
     - target: {fileID: 114340949158251090, guid: e44f753be029a3e4e8ca8f3a14028b80,
         type: 2}
       propertyPath: TempoGerarZumbi
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1117703817387718, guid: e44f753be029a3e4e8ca8f3a14028b80, type: 2}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114340949158251090, guid: e44f753be029a3e4e8ca8f3a14028b80,
+        type: 2}
+      propertyPath: controlaInterface
+      value: 
+      objectReference: {fileID: 101971466}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e44f753be029a3e4e8ca8f3a14028b80, type: 2}
   m_IsPrefabAsset: 0
@@ -3826,7 +3842,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.15, y: -1.76}
+  m_AnchoredPosition: {x: -4.149994, y: -1.7600098}
   m_SizeDelta: {x: 125.35, y: 60.2}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &714792743
@@ -6511,12 +6527,17 @@ Prefab:
     - target: {fileID: 114340949158251090, guid: e44f753be029a3e4e8ca8f3a14028b80,
         type: 2}
       propertyPath: TempoGerarZumbi
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1117703817387718, guid: e44f753be029a3e4e8ca8f3a14028b80, type: 2}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114340949158251090, guid: e44f753be029a3e4e8ca8f3a14028b80,
+        type: 2}
+      propertyPath: controlaInterface
+      value: 
+      objectReference: {fileID: 101971466}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e44f753be029a3e4e8ca8f3a14028b80, type: 2}
   m_IsPrefabAsset: 0
@@ -7388,12 +7409,17 @@ Prefab:
     - target: {fileID: 114340949158251090, guid: e44f753be029a3e4e8ca8f3a14028b80,
         type: 2}
       propertyPath: TempoGerarZumbi
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1117703817387718, guid: e44f753be029a3e4e8ca8f3a14028b80, type: 2}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114340949158251090, guid: e44f753be029a3e4e8ca8f3a14028b80,
+        type: 2}
+      propertyPath: controlaInterface
+      value: 
+      objectReference: {fileID: 101971466}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e44f753be029a3e4e8ca8f3a14028b80, type: 2}
   m_IsPrefabAsset: 0
@@ -8271,12 +8297,17 @@ Prefab:
     - target: {fileID: 114340949158251090, guid: e44f753be029a3e4e8ca8f3a14028b80,
         type: 2}
       propertyPath: TempoGerarZumbi
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1117703817387718, guid: e44f753be029a3e4e8ca8f3a14028b80, type: 2}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114340949158251090, guid: e44f753be029a3e4e8ca8f3a14028b80,
+        type: 2}
+      propertyPath: controlaInterface
+      value: 
+      objectReference: {fileID: 101971466}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e44f753be029a3e4e8ca8f3a14028b80, type: 2}
   m_IsPrefabAsset: 0
@@ -10955,6 +10986,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114340949158251090, guid: e44f753be029a3e4e8ca8f3a14028b80,
+        type: 2}
+      propertyPath: controlaInterface
+      value: 
+      objectReference: {fileID: 101971466}
     - target: {fileID: 1117703817387718, guid: e44f753be029a3e4e8ca8f3a14028b80, type: 2}
       propertyPath: m_IsActive
       value: 1
@@ -11075,7 +11111,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1204197352885920, guid: 4b3bb44effa49480d8d18049684cc33a, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1884102019447498, guid: 4b3bb44effa49480d8d18049684cc33a, type: 2}
       propertyPath: m_IsActive
@@ -11091,6 +11127,11 @@ Prefab:
       propertyPath: m_Mass
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1884102019447498, guid: 4b3bb44effa49480d8d18049684cc33a, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b3bb44effa49480d8d18049684cc33a, type: 2}
   m_IsPrefabAsset: 0

@@ -52,7 +52,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Zumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679, type: 2}
-  TempoGerarZumbi: 2
+  TempoGerarZumbi: 1
   LayerZumbi:
     serializedVersion: 2
     m_Bits: 512
+  controlaInterface: {fileID: 0}
+  QuantidadeZumbisVivos: 0

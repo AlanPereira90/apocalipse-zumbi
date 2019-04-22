@@ -17,4 +17,8 @@ public class AnimacaoPersonagem : MonoBehaviour {
 	public void AnimarMovimento(Vector3 direcao){
 		animatorPersonagem.SetFloat("Movendo", direcao.magnitude);
 	}
+
+	public void Morrer(){
+		animatorPersonagem.SetTrigger("Dead");
+	}
 }

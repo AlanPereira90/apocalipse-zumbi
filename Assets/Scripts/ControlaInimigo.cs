@@ -20,6 +20,9 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
 	private float procentagemGerarKitMedico = 0.1f;
 	private ControlaInterface controlaInterface; 
 
+	[HideInInspector]
+	public GeradorZumbis meuGerador; 
+
 	// Use this for initialization
 	void Start () {
 		Jogador = GameObject.FindWithTag("Jogador");
@@ -56,7 +59,7 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
 
 		if (contadorVagar <= 0){
 			posicaoAleatoriaVagar = PosicaoAleatoria();			
-			contadorVagar = tempoEntrePosicoesVagar;
+			contadorVagar = tempoEntrePosicoesVagar + Random.Range(-1f,1f);
 		}
 
 		if(Vector3.Distance(transform.position, posicaoAleatoriaVagar) > 0.05){
@@ -91,10 +94,15 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
 	}
 
 	public void Morrer(){		
-		Destroy(gameObject);
-		ControlaAudio.instancia.PlayOneShot(SomDeMorte);
-		VerificarGeracaoDeKitMedico();
+		ControlaAudio.instancia.PlayOneShot(SomDeMorte);		
 		controlaInterface.IncrementaZumbisMortos();
+		meuGerador.DecrementaZumbisVivos();
+		animacaoInimigo.Morrer();
+
+		VerificarGeracaoDeKitMedico();
+		Destroy(gameObject,3);	
+		
+		this.enabled = false;	
 	}
 
 	void VerificarGeracaoDeKitMedico(){

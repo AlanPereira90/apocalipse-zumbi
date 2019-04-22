@@ -13,7 +13,7 @@ public class ControlaInterface : MonoBehaviour {
 	public Text TextoZumbisMortos;
 	private ControlaJogador controlaJogador;
 	private float tempoSalvo;
-	private int quantidadeZumbisMortos;
+	public int quantidadeZumbisMortos;
 
 	// Use this for initialization
 	void Start () {
