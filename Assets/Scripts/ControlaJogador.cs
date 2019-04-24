@@ -38,7 +38,7 @@ public class ControlaJogador : MonoBehaviour, IMatavel, ICuravel {
 	}
 
 	void AleatorizarPersonagem(){
-		int tipoPersonagem = Random.Range(1,23);
+		int tipoPersonagem = Random.Range(1,transform.childCount);
 		transform.GetChild(tipoPersonagem).gameObject.SetActive(true);
 	}
 
