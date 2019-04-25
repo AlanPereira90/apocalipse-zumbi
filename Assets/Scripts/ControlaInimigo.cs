@@ -77,7 +77,7 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
 	}
 
 	void AtacaJogador(){
-		int dano = Random.Range(10, 21);
+		int dano = Random.Range(statusInimigo.DanoMinimo, statusInimigo.DanoMaximo);
 		controlaJogador.TomarDano(dano);
 	}
 
@@ -87,9 +87,11 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
 	}
 
 	public void TomarDano(int dano){
-		statusInimigo.Vida -= dano;
-		if (statusInimigo.Vida <= 0){
-			Morrer();
+		if (statusInimigo.Vivo){
+			statusInimigo.Vida -= dano;
+			if (statusInimigo.Vida <= 0){
+				Morrer();
+			}
 		}
 	}
 

@@ -16,13 +16,14 @@ public class GeradorZumbis : MonoBehaviour {
 	public int QuantidadeZumbisVivos = 0;
 
 	private int zumbisMortosParaAumentoDeDificuldade = 10;
-	private int zumbisMortosProximoAumentoDeDificuldade = 10;
+	private int zumbisMortosProximoAumentoDeDificuldade = 0;
 
 	private GameObject jogador;
 
 	// Use this for initialization
 	void Start () {
 		jogador = GameObject.FindWithTag("Jogador");
+		zumbisMortosProximoAumentoDeDificuldade += zumbisMortosParaAumentoDeDificuldade;
 
 		for (int i = 0; i < quantidadeMaximaZumbisVivos; i++) {
 			StartCoroutine(NovoZumbi());
@@ -46,7 +47,7 @@ public class GeradorZumbis : MonoBehaviour {
 	void VerificaAumentoDeDificuldade(){
 		if (controlaInterface.quantidadeZumbisMortos >= zumbisMortosProximoAumentoDeDificuldade){
 			quantidadeMaximaZumbisVivos++;
-			zumbisMortosProximoAumentoDeDificuldade = controlaInterface.quantidadeZumbisMortos + zumbisMortosParaAumentoDeDificuldade;
+			zumbisMortosProximoAumentoDeDificuldade += zumbisMortosParaAumentoDeDificuldade;
 		}
 	}
 

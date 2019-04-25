@@ -17,7 +17,6 @@ public class ControlaJogador : MonoBehaviour, IMatavel, ICuravel {
 		movimentoJogador = GetComponent<MovimentoJogador>();
 		animacaoJogador = GetComponent<AnimacaoPersonagem>();
 		statusJogador = GetComponent<Status>();
-		AleatorizarPersonagem();
 	}
 
 	// Update is called once per frame
@@ -35,11 +34,6 @@ public class ControlaJogador : MonoBehaviour, IMatavel, ICuravel {
 
 		movimentoJogador.Movimentar(direcao, statusJogador.Velocidade);			
 		movimentoJogador.RotacionarJogador(MascaraChao);
-	}
-
-	void AleatorizarPersonagem(){
-		int tipoPersonagem = Random.Range(1,transform.childCount);
-		transform.GetChild(tipoPersonagem).gameObject.SetActive(true);
 	}
 
 	public void TomarDano(int dano){
