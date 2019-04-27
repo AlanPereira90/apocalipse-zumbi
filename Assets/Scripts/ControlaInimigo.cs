@@ -7,7 +7,7 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
 	public GameObject Jogador;
 	public GameObject KitMedico;
 	public AudioClip SomDeMorte;
-	
+	public GameObject ParticulaSangueInimigo;
 	
 	private Vector3 direcao;
 	private Vector3 posicaoAleatoriaVagar;
@@ -111,5 +111,9 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
 		if (Random.value <= procentagemGerarKitMedico){
 			Instantiate(KitMedico, transform.position, Quaternion.identity);
 		}
+	}
+
+	public void ParticulaSangue(Vector3 posicao, Quaternion rotacao){
+		Instantiate(ParticulaSangueInimigo, posicao, rotacao);
 	}
 }

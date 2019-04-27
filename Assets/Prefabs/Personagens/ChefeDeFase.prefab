@@ -855,7 +855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.30588236, g: 1, b: 0.30588236, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -930,11 +930,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KitMedico: {fileID: 1060151288946202, guid: 6150c6f66b7034ec5b3672478195682a, type: 2}
+  ParticulaSangueChefe: {fileID: 1854405276842706, guid: 782095521a21f4a41b60ab36c3b30d68,
+    type: 2}
   SomDeMorte: {fileID: 8300000, guid: 494865de11de0904699682fa13fb0fb8, type: 3}
   sliderVidaChefe: {fileID: 114329085791448320}
-  CorDaVidaMaxima: {r: 0.4575472, g: 1, b: 0.578832, a: 0}
-  CorDaVidaMinima: {r: 1, g: 0.4481132, b: 0.4481132, a: 0}
-  SliderImagem: {fileID: 114656285472333808}
 --- !u!114 &114937076191597912
 MonoBehaviour:
   m_ObjectHideFlags: 1

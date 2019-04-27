@@ -26,8 +26,16 @@ public class Bala : MonoBehaviour {
 	private void OnTriggerEnter(Collider objetoDeColisao) {
 		
 		switch (objetoDeColisao.tag){
-			case "Inimigo": objetoDeColisao.GetComponent<ControlaInimigo>().TomarDano(danoDoTiro); break;
-			case "Chefe": objetoDeColisao.GetComponent<ControlaChefe>().TomarDano(danoDoTiro); break;			
+			case "Inimigo": 
+			  ControlaInimigo inimigo = objetoDeColisao.GetComponent<ControlaInimigo>();
+			  inimigo.TomarDano(danoDoTiro);
+			  inimigo.ParticulaSangue(transform.position, Quaternion.LookRotation(-transform.forward)); 
+			break;
+			case "Chefe": 
+			  ControlaChefe chefe = objetoDeColisao.GetComponent<ControlaChefe>(); 
+			  chefe.TomarDano(danoDoTiro);
+			  chefe.ParticulaSangue(transform.position, Quaternion.LookRotation(-transform.forward));
+			break;			
 		}
 		Destroy(gameObject);
 	}

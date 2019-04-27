@@ -7,11 +7,9 @@ using UnityEngine.UI;
 public class ControlaChefe : MonoBehaviour, IMatavel {
 
 	public GameObject KitMedico;
+	public GameObject ParticulaSangueChefe;
 	public AudioClip SomDeMorte;
-	public Slider sliderVidaChefe;
-	public Color CorDaVidaMaxima, CorDaVidaMinima;
-	public Image SliderImagem;
-	
+	public Slider sliderVidaChefe;	
 
 	private Transform jogador;
 	private NavMeshAgent agente;
@@ -80,9 +78,10 @@ public class ControlaChefe : MonoBehaviour, IMatavel {
 	}
 
 	void AtualizarInterface(){
-		float porcentagemDaVida = (float)statusChefe.Vida / statusChefe.VidaInicial;
-		Color corDaVida = Color.Lerp(CorDaVidaMinima, CorDaVidaMaxima, porcentagemDaVida);
-		SliderImagem.color = corDaVida;
 		sliderVidaChefe.value = statusChefe.Vida;
+	}
+
+	public void ParticulaSangue(Vector3 posicao, Quaternion rotacao){
+		Instantiate(ParticulaSangueChefe, posicao, rotacao);
 	}
 }
